@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#bfbfbf">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="Stop Watch App"
+        android:textColor="@color/black"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <ImageView
+        android:id="@+id/imgClock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/clock"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="00:00"
+        android:textSize="18dp"
+        android:textColor="#1D2553"
+        app:layout_constraintEnd_toEndOf="@+id/imgClock"
+        app:layout_constraintStart_toStartOf="@+id/imgClock"
+        app:layout_constraintTop_toBottomOf="@+id/imgClock" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnMain"
+        android:layout_width="180dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="#1D2553"
+        android:text="Run"
+        android:textSize="50dp"
+        android:textColor="#bfbfbf"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="serif-monospace"
+        android:text="00:00:00"
+        android:textSize="48sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/btnMain"
+        app:layout_constraintStart_toStartOf="@+id/btnMain"
+        app:layout_constraintTop_toBottomOf="@+id/btnMain" />
+
+    <Button
+        android:id="@+id/btnLap"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#334293"
+        android:text="Lap"
+        android:textSize="28dp"
+        android:textColor="#bfbfbf"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnReset"
+        app:layout_constraintTop_toTopOf="@+id/btnReset" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#334293"
+        android:text="Reset"
+        android:textSize="28dp"
+        android:textColor="#bfbfbf"
+        app:layout_constraintEnd_toStartOf="@+id/btnLap"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chrono" />
+
+    <ListView
+        android:id="@+id/lst"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        style="@style/ListViewItemStyle"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/btnReset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
